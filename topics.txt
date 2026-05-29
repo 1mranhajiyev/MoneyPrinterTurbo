@@ -1,0 +1,19 @@
+# Topics for auto video generation
+# One topic per line. Lines starting with # are ignored.
+# The scheduler picks a random topic each run.
+
+The history of Azerbaijan
+5 habits of highly successful people
+How to learn a new language fast
+Amazing facts about the human brain
+The future of artificial intelligence
+How to stay productive when working from home
+Top 5 travel destinations in 2026
+The science of getting better sleep
+Mindblowing facts about space
+How money is printed and what gives it value
+The psychology of motivation
+10 things you didn't know about the internet
+How electric cars work
+The rise of AI in everyday life
+Simple tricks to improve your memory
