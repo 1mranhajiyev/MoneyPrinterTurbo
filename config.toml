@@ -1,67 +1,56 @@
 [app]
-video_source = "pexels" # "pexels" or "pixabay"
+video_source = "pexels"
 
-# Konfiqurasiya panelini göstər
 hide_config = false
 
-# edge_tts timeout (saniyə)
 edge_tts_timeout = 30
 
-# TLS sertifikat yoxlaması
 tls_verify = true
 
-# -------------------------------------------------------
 # Pexels API Key
-# Qeydiyyat: https://www.pexels.com/api/
-# Pulsuz plandır — aylıq 200 sorğu
-# Açarı aşağıya daxil edin:
-# Məsələn: pexels_api_keys = ["YOUR_PEXELS_KEY_HERE"]
-# -------------------------------------------------------
+# Register at https://www.pexels.com/api/
+# Example: pexels_api_keys = ["YOUR_KEY_HERE"]
 pexels_api_keys = ["YOUR_PEXELS_KEY_HERE"]
 
-# Pixabay istifadə etmirsinizsə boş buraxın
 pixabay_api_keys = []
 
-# -------------------------------------------------------
-# LLM Provider — Pollinations AI (tamamilə pulsuz, API key tələb etmir)
-# -------------------------------------------------------
+# LLM Provider
+# Options: pollinations, openai, deepseek, gemini, moonshot, ollama, etc.
+# "pollinations" is free, no API key needed
 llm_provider = "pollinations"
 
-########## Pollinations AI Settings
-# Pulsuz, qeydiyyat tələb etmir
+# Pollinations AI - free, no registration needed
 # https://pollinations.ai/
 pollinations_api_key = ""
 pollinations_base_url = "https://pollinations.ai/api/v1"
 pollinations_model_name = "openai-fast"
 
-########## Ollama (Yerli/Offline istifadə üçün)
-# Offline model istifadə etmək istəsəniz:
+# Ollama - local/offline models
 ollama_base_url = ""
 ollama_model_name = ""
 
-########## OpenAI (ödənişli — istəyə bağlı)
+# OpenAI
 openai_api_key = ""
 openai_base_url = ""
 openai_model_name = "gpt-4o-mini"
 
-########## DeepSeek (qeydiyyatda kredit verir)
+# DeepSeek - free credits on registration
 # https://platform.deepseek.com/api_keys
 deepseek_api_key = ""
 deepseek_base_url = "https://api.deepseek.com"
 deepseek_model_name = "deepseek-chat"
 
-########## Google Gemini (pulsuz tier mövcuddur)
+# Google Gemini - free tier available
 # https://aistudio.google.com/apikey
 gemini_api_key = ""
 gemini_model_name = "gemini-2.5-flash"
 
-########## Moonshot (qeydiyyatda kredit verir)
+# Moonshot - free credits on registration
 # https://platform.moonshot.cn/console/api-keys
 moonshot_api_key = ""
 moonshot_base_url = "https://api.moonshot.cn/v1"
 moonshot_model_name = "moonshot-v1-8k"
 
-# Digər provayderləri boş buraxın
 oneapi_api_key = ""
 oneapi_base_url = ""
 oneapi_model_name = ""
@@ -91,27 +80,18 @@ grok_api_key = ""
 grok_model_name = "grok-4.3"
 grok_base_url = "https://api.x.ai/v1"
 
-# -------------------------------------------------------
-# Altyazı generasiyası
-# "edge" — pulsuz, sürətli (tövsiyə olunur)
-# "whisper" — daha keyfiyyətli, ~3GB model tələb edir
-# -------------------------------------------------------
+# Subtitle provider: "edge" (fast, free) or "whisper" (quality, needs ~3GB model)
 subtitle_provider = "edge"
 
-# -------------------------------------------------------
-# ImageMagick — Windows üçün mütləq lazımdır!
-# 1. Static versiya yükləyin:
-#    https://imagemagick.org/archive/binaries/ImageMagick-7.1.1-29-Q16-x64-static.exe
-# 2. Quraşdırın (default yolu dəyişməyin)
-# 3. Aşağıdakı sətrin başındakı # işaretini silin və yolu düzəldin:
-# -------------------------------------------------------
+# ImageMagick - REQUIRED on Windows!
+# Download static version: https://imagemagick.org/archive/binaries/ImageMagick-7.1.1-29-Q16-x64-static.exe
+# After install, uncomment and set the correct path below:
 # imagemagick_path = "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe"
 
-# -------------------------------------------------------
-# FFmpeg — adətən avtomatik yüklənir
-# Əgər xəta versə:
-#   https://www.gyan.dev/ffmpeg/builds/
-# -------------------------------------------------------
+# FFmpeg - usually downloaded automatically
+# If you get "No ffmpeg exe could be found" error, download from:
+# https://www.gyan.dev/ffmpeg/builds/
+# Then uncomment and set path:
 # ffmpeg_path = "C:\\ffmpeg\\bin\\ffmpeg.exe"
 
 endpoint = ""
@@ -128,20 +108,16 @@ max_queued_tasks = 100
 
 
 [whisper]
-# Yalnız subtitle_provider = "whisper" olduqda aktiv olur
 model_size = "large-v3"
 device = "CPU"
 compute_type = "int8"
 
 
 [proxy]
-# Proxy tələb olunursa (VPN varsa boş buraxın):
 # http = "http://user:pass@proxy:1234"
 # https = "http://user:pass@proxy:1234"
 
 [azure]
-# Azure TTS (istəyə bağlı — daha keyfiyyətli səs üçün)
-# https://portal.azure.com
 speech_key = ""
 speech_region = ""
 
@@ -150,10 +126,6 @@ api_key = ""
 
 [ui]
 hide_log = false
-
-# Altyazı mövqeyi: "top", "center", "bottom", "custom"
-# subtitle_position = "bottom"
-# custom_position = 70.0
 
 upload_post_enabled = false
 upload_post_api_key = ""
