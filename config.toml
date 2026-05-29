@@ -1,0 +1,162 @@
+[app]
+video_source = "pexels" # "pexels" or "pixabay"
+
+# Konfiqurasiya panelini göstər
+hide_config = false
+
+# edge_tts timeout (saniyə)
+edge_tts_timeout = 30
+
+# TLS sertifikat yoxlaması
+tls_verify = true
+
+# -------------------------------------------------------
+# Pexels API Key
+# Qeydiyyat: https://www.pexels.com/api/
+# Pulsuz plandır — aylıq 200 sorğu
+# Açarı aşağıya daxil edin:
+# Məsələn: pexels_api_keys = ["YOUR_PEXELS_KEY_HERE"]
+# -------------------------------------------------------
+pexels_api_keys = ["YOUR_PEXELS_KEY_HERE"]
+
+# Pixabay istifadə etmirsinizsə boş buraxın
+pixabay_api_keys = []
+
+# -------------------------------------------------------
+# LLM Provider — Pollinations AI (tamamilə pulsuz, API key tələb etmir)
+# -------------------------------------------------------
+llm_provider = "pollinations"
+
+########## Pollinations AI Settings
+# Pulsuz, qeydiyyat tələb etmir
+# https://pollinations.ai/
+pollinations_api_key = ""
+pollinations_base_url = "https://pollinations.ai/api/v1"
+pollinations_model_name = "openai-fast"
+
+########## Ollama (Yerli/Offline istifadə üçün)
+# Offline model istifadə etmək istəsəniz:
+ollama_base_url = ""
+ollama_model_name = ""
+
+########## OpenAI (ödənişli — istəyə bağlı)
+openai_api_key = ""
+openai_base_url = ""
+openai_model_name = "gpt-4o-mini"
+
+########## DeepSeek (qeydiyyatda kredit verir)
+# https://platform.deepseek.com/api_keys
+deepseek_api_key = ""
+deepseek_base_url = "https://api.deepseek.com"
+deepseek_model_name = "deepseek-chat"
+
+########## Google Gemini (pulsuz tier mövcuddur)
+# https://aistudio.google.com/apikey
+gemini_api_key = ""
+gemini_model_name = "gemini-2.5-flash"
+
+########## Moonshot (qeydiyyatda kredit verir)
+# https://platform.moonshot.cn/console/api-keys
+moonshot_api_key = ""
+moonshot_base_url = "https://api.moonshot.cn/v1"
+moonshot_model_name = "moonshot-v1-8k"
+
+# Digər provayderləri boş buraxın
+oneapi_api_key = ""
+oneapi_base_url = ""
+oneapi_model_name = ""
+
+enable_g4f = false
+g4f_model_name = "gpt-3.5-turbo"
+
+azure_api_key = ""
+azure_base_url = ""
+azure_model_name = "gpt-35-turbo"
+azure_api_version = "2024-02-15-preview"
+
+qwen_api_key = ""
+qwen_model_name = "qwen-max"
+
+minimax_api_key = ""
+minimax_base_url = "https://api.minimax.io/v1"
+minimax_model_name = "MiniMax-M2.7"
+
+modelscope_api_key = ""
+modelscope_base_url = "https://api-inference.modelscope.cn/v1/"
+modelscope_model_name = "Qwen/Qwen3-32B"
+
+litellm_model_name = "openai/gpt-4o-mini"
+
+grok_api_key = ""
+grok_model_name = "grok-4.3"
+grok_base_url = "https://api.x.ai/v1"
+
+# -------------------------------------------------------
+# Altyazı generasiyası
+# "edge" — pulsuz, sürətli (tövsiyə olunur)
+# "whisper" — daha keyfiyyətli, ~3GB model tələb edir
+# -------------------------------------------------------
+subtitle_provider = "edge"
+
+# -------------------------------------------------------
+# ImageMagick — Windows üçün mütləq lazımdır!
+# 1. Static versiya yükləyin:
+#    https://imagemagick.org/archive/binaries/ImageMagick-7.1.1-29-Q16-x64-static.exe
+# 2. Quraşdırın (default yolu dəyişməyin)
+# 3. Aşağıdakı sətrin başındakı # işaretini silin və yolu düzəldin:
+# -------------------------------------------------------
+# imagemagick_path = "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe"
+
+# -------------------------------------------------------
+# FFmpeg — adətən avtomatik yüklənir
+# Əgər xəta versə:
+#   https://www.gyan.dev/ffmpeg/builds/
+# -------------------------------------------------------
+# ffmpeg_path = "C:\\ffmpeg\\bin\\ffmpeg.exe"
+
+endpoint = ""
+material_directory = ""
+
+enable_redis = false
+redis_host = "localhost"
+redis_port = 6379
+redis_db = 0
+redis_password = ""
+
+max_concurrent_tasks = 5
+max_queued_tasks = 100
+
+
+[whisper]
+# Yalnız subtitle_provider = "whisper" olduqda aktiv olur
+model_size = "large-v3"
+device = "CPU"
+compute_type = "int8"
+
+
+[proxy]
+# Proxy tələb olunursa (VPN varsa boş buraxın):
+# http = "http://user:pass@proxy:1234"
+# https = "http://user:pass@proxy:1234"
+
+[azure]
+# Azure TTS (istəyə bağlı — daha keyfiyyətli səs üçün)
+# https://portal.azure.com
+speech_key = ""
+speech_region = ""
+
+[siliconflow]
+api_key = ""
+
+[ui]
+hide_log = false
+
+# Altyazı mövqeyi: "top", "center", "bottom", "custom"
+# subtitle_position = "bottom"
+# custom_position = 70.0
+
+upload_post_enabled = false
+upload_post_api_key = ""
+upload_post_username = ""
+upload_post_platforms = ["tiktok", "instagram"]
+upload_post_auto_upload = false
