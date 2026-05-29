@@ -22,7 +22,7 @@ llm_provider = "pollinations"
 # Pollinations AI - free, no registration needed
 # https://pollinations.ai/
 pollinations_api_key = ""
-pollinations_base_url = "https://pollinations.ai/api/v1"
+pollinations_base_url = "https://text.pollinations.ai/openai"
 pollinations_model_name = "openai-fast"
 
 # Ollama - local/offline models
